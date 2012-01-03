@@ -159,10 +159,11 @@ public class Board
      * note: white ends past 24, black ends below 1.
      */
     public void make2PieceGame( ) throws BadBoardException {
-        setPoint(10, /* howMany */ 1, black);
-        black_bear = 14;
+        setPoint(20, /* howMany */ 1, black);
+        setPoint(12, 1, black);
+        black_bear = 13;
         
-        setPoint(11, /* howMany */ 1, white);
+        setPoint(4, /* howMany */ 1, white);
         white_bear = 14;
         System.out.println("created board with 2 pieces");
         checkForBadNumberOfBlots( white );
@@ -170,10 +171,25 @@ public class Board
     } // makeAlmostDoneGame
     
     
+    
+    /**
+     * how many pieces of this color are on the bar, waiting to come back into the game.
+     */
+    public int getBar( int theColor ) {
+        if ( ! legitColor(theColor) ) {
+            throw new IllegalArgumentException("bad color '" + theColor + "'");
+        }
+        if (theColor == white) {
+            return white_bar;
+        } else /* if (theColor == black)*/ {
+            return black_bar;
+        } /* else ... bad color, alt color? */
+    } /* getBar( ) */
+    
 
     /**
-     * Tells how many blots (pieces) of a particular color are here (on the bar, the bear, or the board).
-     * There are supposed to always be 15 blots of each color. 
+     * Tells how many blots (pieces) of a particular color are here (including on the bar, the bear, or the board).
+     * There are supposed to always be 15 blots of each color in traditional backgammon. 
      * Used by "checkForBadNumberOfBlots( ) to check possible corruption of board.
      */
     public int howManyBlots(int theColor) {

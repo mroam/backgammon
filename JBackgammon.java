@@ -309,7 +309,7 @@ public class JBackgammon extends JFrame implements ActionListener, Communication
             {
                 handleBar();
             }
-            if (!canMove())
+            if (!canMove(current_player))
             {
                 forfeit();
             }
@@ -389,7 +389,7 @@ public class JBackgammon extends JFrame implements ActionListener, Communication
         endMove();
         repaint();
 
-        if ( ! canMove() ) 
+        if ( ! canMove(current_player) ) 
         {
             forfeit();
         }
@@ -544,7 +544,7 @@ public class JBackgammon extends JFrame implements ActionListener, Communication
         if (myBoard.onBar(current_player))
         {
             handleBar();
-        } else if ( ! canMove() ) {
+        } else if ( ! canMove(current_player) ) {
             forfeit();
         }
     } // doRoll( )
@@ -632,10 +632,74 @@ public class JBackgammon extends JFrame implements ActionListener, Communication
     }
     
     
+    
+    
+    // Which of my pieces are moveable?
+    private ArrayList<int> allMoveablePieces( int theColor, JBackgammon myGame )
+    {
+    	ArrayList<PointLoc> myMovers = new ArrayList<PointLoc>( );
+    	if (canOnlyMoveFromBar) {
+    		/* only thing we can do is move in from bar,
+    		  so how to show that in a list: with a code number? Or a "PointLoc" class?
+    		  */
+    		  
+    		  return
+    	}
+        int move1, move2;
+        // Cycle through all the points
+        for (int point = 1; point <=24; point++)
+        {
+            // Only check points which contain the player's pieces
+            if (myBoard.getColorOnPoint(point) == theColor)
+            {
+                if (theColor==white)
+                {
+                    move1 = point + myBoard.getDice1();
+                    move2 = point + myBoard.getDice2();
+                }
+                else
+                {
+                    move1 = point - myBoard.getDice1();
+                    move2 = point - myBoard.getDice2();
+                }
+                if ( (checkFair(move1) && used_move != 1) || (checkFair(move2) && used_move != 2))
+                {
+                    return true;
+                }
+
+                // checkFair() only allows bearing off with exact rolls.
+                // If the player has no other option, moving with a roll 
+                // greater than needed to bear off is legal
+                // White's bearOff move is 25, Black's is 0 
+                else if (needsInexactRolls() && (move1 > 25 || move1 < 0 || move2 > 25 || move2 < 0))
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    } // allMoveablePieces( )
+    
+    
+    /**
+    * With doubles we can possibly move 3 pieces in from bar and still have a 4th piece to move,
+    * and without doubles then we can move 1 piece in from bar and still have a move left.
+    * This says whether we're stuck moving ONLY pieces from the bar.
+    * used by "allMoveablePieces( )"
+    */
+    private boolean canOnlyMoveFromBar( int theColor, JBackgammon myGame ) {
+    	if (myBoard.getDice1() == myBoard.getDice2()) { /* doubles! */
+    		return ((myGame.getBar( theColor ) > 3);
+    	} else {
+    		return ((myGame.getBar( theColor ) > 1);
+    	}
+    } /* canOnlyMoveFromBar( ) */
+    
+    
     /**
      * Will use methods (below)
      * private boolean checkFair(int new_pos)
-     * private boolean canMove()
+     * private boolean canMove(int color)
      * 
      */
     ArrayList<Move> allLegalMoves( int theColor, JBackgammon myGame) throws BadMoveException, BadPartialMoveException, BadBoardException {
@@ -644,6 +708,11 @@ public class JBackgammon extends JFrame implements ActionListener, Communication
         /* look at the JBackgammon.handlePoint( ) using every point to find all legal moves. Might also want to check canMove( ) */
         /* for every point ...
          *     if it has a theColor piece... */
+        if ( ! canMove( theColor ) ) {
+        	return new ArrayList<Move>( ); /*  I will return an ArrayList that has no elements ! */
+        }
+        ArrayList<int> myPoints = allMoveablePieces(theColor,myGame); /* might be empty 
+        
         int newPoint1Start = 10; /* simple game with 2 players starts with black on point 10 */
         handlePoint( newPoint1Start ); /* will discover the potential points we can move to: potmove1, potmove2 WHAT about doubles? potmove3,4?? */
         int endPointA = potmove1; // better check not zero!
@@ -731,8 +800,10 @@ public class JBackgammon extends JFrame implements ActionListener, Communication
 
 
     // With the current rolls, can the user move anywhere?
-    private boolean canMove()
+    // used to just use "current_player" to determine color
+    private boolean canMove( int color)
     {
+    	
         int move1, move2;
         // Cycle through all the points
         for (int point = 1; point <=24; point++)
@@ -740,10 +811,10 @@ public class JBackgammon extends JFrame implements ActionListener, Communication
             // Only check points which contain the player's pieces
             if (myBoard.getColorOnPoint(point) == current_player)
             {
-                if (current_player==white)
+                if (color==white)
                 {
-                    move1 = point+myBoard.getDice1();
-                    move2 = point+myBoard.getDice2();
+                    move1 = point + myBoard.getDice1();
+                    move2 = point + myBoard.getDice2();
                 }
                 else
                 {
@@ -758,6 +829,7 @@ public class JBackgammon extends JFrame implements ActionListener, Communication
                 // checkFair() only allows bearing off with exact rolls.
                 // If the player has no other option, moving with a roll 
                 // greater than needed to bear off is legal
+                // White's bearOff move is 25, Black's is 0 
                 else if (needsInexactRolls() && (move1 > 25 || move1 < 0 || move2 > 25 || move2 < 0))
                 {
                     return true;

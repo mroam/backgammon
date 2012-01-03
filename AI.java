@@ -39,8 +39,9 @@ public class AI
             myGame.doRoll( );
         }
         ArrayList<Move> myMoves = myGame.allLegalMoves( myColor, myGame );
-        Move gonnaMove = bestMoveOf( myMoves );
-        /* to find legal moves, check out JBackgammon's canMove(), handlePoint( ) */
+        /* might not have any moves! */
+        
+        Move gonnaMove = bestMoveOf( myMoves ); /* might be null */
         /* to make the move actually happen, check out JBackgammon's methods:
          superMove( ), forfeit( ), endTurn( ) */
     } // thinkAndPlay()
@@ -52,11 +53,14 @@ public class AI
      */
     public Move bestMoveOf( ArrayList<Move> possibleMoves ) throws BadMoveException {
         System.out.println("AI's doBestMove( ) for now just picks first move. Fix!!");
-        if (possibleMoves == null ) {
+        if ( possibleMoves == null ) {
             throw new BadMoveException("no possible Moves! Maybe just skip a turn?");
         }
+        if ( possibleMoves.isEmpty( ) ) {
+            return null;
+        }
         Move bestMove = possibleMoves.get(0); /* 1? */
-        System.out.println( "AI will move to " + bestMove );
+        System.out.println( "AI is dumb, just choosing first move. Will move to " + bestMove );
         return bestMove;
     } /* bestMoveOf */
     
