@@ -1,0 +1,57 @@
+
+/**
+ * Holds a "single" part of a move 
+ * (one blot moves from point or bar to point or bear off)
+ * 
+ * @author (Mike Roam) 
+ * @version (2011 dec 6)
+ */
+public class MoveOne
+{
+    // instance variables - replace the example below with your own
+    private int roll = 0;  /* keeping this for reference, but creator decides and 
+    specifies end location, since bearing off sometimes allows higher roll if you
+    there are no pieces that can use that full higher roll */
+    
+    private int start = -1; /* note: 0 means from bar */
+    private int end = -1; 
+    
+
+    /**
+     * Constructor for objects of class MoveOne
+     */
+    public MoveOne()
+    {
+        // initialise instance variables
+    }
+    
+    
+    /**
+     * Constructor for objects of class MoveOne
+     * Note: start + roll might not equal end when bearing off
+     * and no higher blots can use a too-high roll.
+     */
+    public MoveOne(int newStart, int newRoll, int newEnd)
+    {
+        
+        if (Board.legitPointNum( start ) && Board.legitPointNum( end ) && 
+              Board.legitRoll( roll )) {
+                  start = newStart;
+                  roll = newRoll;
+                  end = newEnd;
+                }
+    } // constructor with values
+    
+
+    /**
+     * An example of a method - replace this comment with your own
+     * 
+     * @param  y   a sample parameter for a method
+     * @return     the sum of x and y 
+     */
+    public int sampleMethod(int y)
+    {
+        // put your code here
+        return x + y;
+    }
+}

@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=c\ p
+comment0.target=FixedButton(java.awt.Container,\ JBackgammon)
+comment1.params=point
+comment1.target=void\ drawOnPoint(int)
+numComments=2

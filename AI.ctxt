@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=myNewGame
+comment0.target=AI(JBackgammon)
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ AI\n
+comment1.params=
+comment1.target=void\ thinkAndPlay()
+comment1.text=\n\ AI's\ main\ method\n\ Should\ this\ return\ a\ "Move"\ and\ somebody\ else\ handles\ moving??\ -gy\ suggestion\ 2011\n
+comment2.params=possibleMoves
+comment2.target=Move\ bestMoveOf(java.util.ArrayList)
+comment2.text=\n\ for\ now\ just\ picks\ first\ move\n
+numComments=3

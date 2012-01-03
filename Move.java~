@@ -1,0 +1,111 @@
+import java.util.*;  // provides Collection ?
+
+/**
+ * Holds a "move", which includes two dice values
+ * (note: the order matters when coming in from bar, when bearing off, and when there
+ * are protected enemy points in between.)
+ * and specifies the start points. (Since end points are figured from adding rolls to 
+ * starting points, I'll let finish points be calculated rather than cached.)
+ * 
+ * Since this is going to be in a set, it has to implement equals & hashcode
+ * 
+ * Uh-oh, what about doubles? Have to have 4 rolls and 4 point starts and "doubles" flag?
+ * 
+ * @author Julien S.,Josh G, Mike Roam
+ * @version (2011 Nov 15)
+ */
+public class Move
+{
+    
+   
+    private Collection<MoveOne> moves = new ArrayList<MoveOne>( );
+    private int howManyBlotsAreMoving = 1; // might be 4 pieces moving with doubles!
+
+    
+    /**
+     * Constructor for objects of class Move
+     */
+    public Move(int newRoll1, int newRoll2, int newPoint1Start, int newPoint2Start,
+    int newPoint3Start, int newPoint4Start)
+    {
+        roll1 = newRoll1;
+        roll2 = newRoll2;
+        point1Start = newPoint1Start;
+        point2Start = newPoint2Start;
+        
+        // signal that only one guy is moving by having the 2nd one start at a negative spot
+        if ( nonExistent( newPoint1Start) ) {
+            System.out.println("Totally bad: you're trying to make a move that doesn't have a legit starting pint");
+        }
+        if ( Board.legitPointNum( newPoint2Start) ) {
+            howManyBlotsAreMoving = 1;
+            moves1[0] = newRoll1;
+            moves1[1] = newRoll2;
+            if (newRoll1 == newRoll2) {
+                System.out.println("Hey, we can't really handle doubles yet");
+                moves1[2] = newRoll1;
+                moves1[3] = newRoll1;
+            }
+        } else {
+            howManyBlotsAreMoving = 2; 
+            /*what about doubles?? might actually be 2,3, or 4 pieces moving*/
+            moves1[0] = newRoll1;
+            moves2[0] = newRoll2;
+        }
+    } // constructor
+    
+    
+    
+  
+
+    /**
+     * 
+     * 
+     * @param  y   a sample parameter for a method
+     * @return     the sum of x and y 
+     */
+    public boolean equals(Move other)
+    {
+        boolean identical = false;
+        // do they have same values?
+        if ( sameValues( other )) {
+            identical = true;
+        }    // of do they have values in swapped order IN A CASE WHEN ORDER DOESN'T MATTER?
+        else if (orderDoesNotMatter( )) {
+            identical = true;
+        }
+        return identical;
+    } // equals( )
+    
+    
+    public boolean sameValues( Move other ) {
+        System.out.println("Beware: Move.sameValues( ) isn't checking ALL of the values yet. Fix!");
+        return ( ( roll1 == other.roll1 ) && ( roll2 == other.roll2 ) && 
+            ( point1Start == other.point1Start ) && ( point2Start == other.point2Start ) );
+    } // sameValues( )
+    
+    
+    public boolean sameValuesInReverseOrder ( Move other ) {
+        return ( ( roll1 == other.roll2 ) && ( roll2 == other.roll1 ) && 
+            ( point1start == other.point2Start ) && ( point2start == other.point1Start ) );
+    } // sameValuesInReverseOrder( )
+    
+    
+    /**
+     * Order of moves matters when one or more blots is coming in from the bar, or
+     * when one or more blots are bearing off, or there are protected enemy points in between.
+     * I guess I only have to check whether order matters for one of the moves (
+     */
+    public boolean orderDoesNotMatter( ) {
+        System.out.println( "not really testing for the possibility of order not mattering ");
+        return false; // for now... 
+    }
+    
+    
+    public int hashCode( ) {
+        // equal Moves have to have equal hashCodes!!
+        // this could be achieved by just adding up all the data points (which have init values)
+        return roll1 + roll2 + point1Start + point2Start + point3Start +point4Start;
+    }
+    
+} // class Move

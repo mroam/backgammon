@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.params=theNewPartials\ myNewColor\ myNewGame
+comment0.target=Move(java.util.ArrayList,\ int,\ JBackgammon)
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ Move,\ receiving\ 2\ moves.\n\ 0,1,2,3,4\ are\ all\ possible\ since\ we\ might\ have\ rolled\ doubles\ and\ might\ be\ blocked.\n
+comment1.params=
+comment1.target=java.util.ArrayList\ getMyPartials()
+comment2.params=other
+comment2.target=boolean\ equals(java.lang.Object)
+comment2.text=\n\ has\ to\ check\ values\ inside\ PartialMoves\n
+comment3.params=other
+comment3.target=boolean\ hasSameValuesAs(Move)
+comment3.text=\n\ called\ by\ equals(\ )\n
+comment4.params=other
+comment4.target=boolean\ hasSameValuesInDifferentOrderFrom(Move)
+comment4.text=\n\ Called\ by\ equal(\ ),\ which\ has\ already\ checked\ for\ null\ and\ size\ mismatch,\ but\ I'll\ check\n\ them\ again\ in\ case\ I\ ever\ want\ to\ re-use\ this\ function.\n\ \n\ Since\ collections\ can\ be\ sorted,\ I\ sort\ both\ lists\ of\ moves\ and\ then\ compare\ them\ in\ parallel.\n\ (Early\ idea\ was\ just\ check\ containsAll\ in\ both\ directions,\ but\ that\ could\ give\ false\ positive\ \n\ if\ they\ have\ the\ same\ partialMoves\ but\ in\ different\ proportions\!\ eg\ [2,2,3]\ \=?\ [2,3,3])\n
+comment5.params=
+comment5.target=boolean\ checkWhetherOrderMatters()
+comment5.text=\n\ This\ is\ called\ by\ constructor\ to\ set\ a\ flag.\ Won't\ change,\ will\ it??\n\ \n\ Order\ of\ moves\ matters\ when\ one\ or\ more\ blots\ is\ coming\ in\ from\ the\ bar,\ or\n\ when\ one\ or\ more\ blots\ are\ bearing\ off,\ or\ there\ are\ protected\ enemy\ points\ in\ between\n\ when\ one\ piece\ is\ making\ multiple\ moves.\n\ \n\ Maybe\ the\ creator\ would\ know\ better\ whether\ order\ matters???\ And\ could\ just\ tell\ us?\n
+comment6.params=
+comment6.target=boolean\ thisPathOnlyWorksInOneOrder()
+comment6.text=\n\ Tricky\:\ called\ when\ we\ see\ that\ a\ blot\ is\ moving\ twice\:\ detected\ by\ "checkWhetherOrderMatters"\n\ which\ sees\ somebody\ moving\ from\ a\ place\ they\ haven't\ reached\ yet.\ Maybe\ the\ blot\ is\ moving\ 2\n\ and\ then\ 4,\ and\ maybe\ it\ couldn't\ get\ there\ if\ it\ instead\ moved\ 4\ and\ then\ 2.\ Check\ it\ out\n\ by\ finding\ the\ double\ moving\ blot\ in\ the\ PartialMove\ and\ ask\ the\ board\ if\ the\ other\ path\ hits\n\ Board.protectedPoint(\ \ other\ color\ )\ ...\ if\ so,\ this\ method\ returns\ TRUE;\n
+comment7.params=
+comment7.target=java.lang.String\ toString()
+comment7.text=thisPathOnlyWorksInOneOrder(\ )
+comment8.params=
+comment8.target=int\ hashCode()
+numComments=9

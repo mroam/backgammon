@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=newDice1\ newDice2
+comment0.target=DiceRoll(int,\ int)
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ DiceRoll\n
+comment1.params=diceVal
+comment1.target=boolean\ hasLegitDiceValue(int)
+comment1.text=\n\ allows\ nullDice\ (0)\ or\ minDiceVal\ to\ maxDiceVal\n
+comment2.params=
+comment2.target=int\ getDice1()
+comment2.text=hasLegitDiceValue(\ )
+comment3.params=
+comment3.target=int\ getDice2()
+comment4.params=
+comment4.target=boolean\ isDoubles()
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment5.text=isDoubles
+numComments=6

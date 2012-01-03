@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.params=i\ j
+comment0.target=void\ receiverolls(int,\ int)
+comment1.params=oldpos\ newpos
+comment1.target=void\ receivemove(int,\ int)
+comment10.params=
+comment10.target=void\ connectionrefused()
+comment2.params=
+comment2.target=void\ receiveResetReq()
+comment3.params=resp
+comment3.target=void\ receiveResetResp(int)
+comment4.params=message
+comment4.target=void\ receivemessage(java.lang.String)
+comment5.params=
+comment5.target=void\ connected()
+comment6.params=
+comment6.target=void\ turnfinished()
+comment7.params=spike
+comment7.target=void\ receivebar(int)
+comment8.params=
+comment8.target=void\ disconnected()
+comment9.params=
+comment9.target=void\ receivelose()
+numComments=11

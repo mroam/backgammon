@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.params=p\ n
+comment0.target=MainMenuListener(javax.swing.JFrame,\ boolean)
+comment0.text=\n\ n\ is\ boolean\ whether\ we're\ playing\ over\ network\ or\ not.\n
+comment1.params=e
+comment1.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment2.params=e
+comment2.target=void\ windowClosing(java.awt.event.WindowEvent)
+numComments=3
