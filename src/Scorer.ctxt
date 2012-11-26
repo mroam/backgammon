@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.params=myBoard\ playerColor
+comment0.target=double\ score(Board,\ Player)
+comment0.text=\n\n\ @param\ myBoard\ \ \ \ \ \ Which\ board\ to\ look\ at.\ Scorer\ probably\ need\ not\ care\ whose\n\ turn\ it\ is\ nor\ whether\ any\ points\ are\ currently\ selected.\n\ @param\ \ playerColor\ \ \ \ Wo\ is\ looking\ at\ the\ board--white\ will\ think\ differently\n\ about\ the\ goodness\ of\ a\ board\ than\ black\ will\!\n\ @return\ \ \ \ \ \ how\ the\ board\ looks\ to\ the\ Scorer,\ using\ player's\ point\ of\ view\n
+numComments=1

@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=myNewGame
+comment0.target=AI(Game)
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ AI\n
+comment1.params=
+comment1.target=Strategy\ getMyStrategy()
+comment1.text=\n\ should\ there\ be\ a\ setMyStrategy(\ )\ or\ better\ off\ letting\n\ "AI.switchStrategy(\ )"\ take\ care\ of\ it\ more\ or\ less\ intelligently??\n
+comment2.params=
+comment2.target=int\ getHowManyTurnsSoFar()
+comment3.params=newHowMany
+comment3.target=void\ setHowManyTurnsSoFar(int)
+comment4.params=aBoard\ playerColor
+comment4.target=Move\ chooseAMove(Board,\ Player)
+comment4.text=\n\ AI's\ main\ method\ (was\ called\ thinkAndPlay\ but\ doesn't\ play\ anymore)\n\ Should\ this\ return\ a\ "Move"\ and\ somebody\ else\ handles\ moving??\ -gy\ suggestion\ 2011\n
+comment5.params=aBoard\ playerColor
+comment5.target=Strategy\ pickAStrategy(Board,\ Player)
+comment5.text=\n\ hmmm,\ we\ might\ get\ here\ if\ startGameStrategy\ is\ stuck,\n\ so\ maybe\ we\ should\ switch\ to\ PointBuildStrategy.\n\ \n\ hmmm,\ when\ do\ we\ switch\ from\ what\ to\ what?\n
+numComments=6

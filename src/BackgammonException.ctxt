@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=
+comment0.target=BackgammonException()
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ BackgammonException\n
+comment1.params=newMsg
+comment1.target=BackgammonException(java.lang.String)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ BackgammonException\n
+numComments=2

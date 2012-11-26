@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=
+comment0.target=RiskAverseStrategy()
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ RiskAverse\n
+comment1.params=currentBoard\ theColor
+comment1.target=Move\ pickBestMove(Board,\ Player)
+comment1.text=\n\ Given\ a\ board,\ will\ tell\ us\ the\ "best"\ move.\n
+comment2.params=
+comment2.target=java.lang.String\ toString()
+numComments=3

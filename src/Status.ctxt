@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Status()
+comment0.text=putting\ the\ following\ into\ Board\ so\ one\ game\ can\n\ have\ multiple\ hypothetical\ boards\ with\ varying\ points\ clicked\n
+comment1.params=
+comment1.target=void\ newGame()
+numComments=2

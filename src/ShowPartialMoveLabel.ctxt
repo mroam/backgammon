@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=aContentPane\ newMyGame\ moveNum\ bgColor
+comment0.target=ShowPartialMoveLabel(java.awt.Container,\ Game,\ int,\ java.awt.Color)
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ ShowPartialMoveLabel\n
+comment1.params=startPt\ endPt\ moveNum
+comment1.target=void\ drawMove(int,\ int,\ int)
+comment1.text=\n\ Idea,\ unwritten\:\ draws\ 2\ labels\ and\ puts\ line\ between\ them.\n\ Maybe\ this\ belongs\ in\ game,\ near\ Game.showPartialMove(\ )\n
+comment2.params=point
+comment2.target=void\ drawOnPoint(int)
+comment2.text=\n\ Is\ used\ to\ display\ the\ PartialMoves\ on\ the\ GUI,\ somewhere\ on\ the\n\ point\ specified.\ Can\ handle\ bar\ &\ bear.\n\ Uses\ Game.findX(pointNum)\ and\ Game.findY(pointNum)\ which\ report\ the\n\ coords\ of\ the\ specified\ point.\n
+numComments=3

@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ init()
+comment0.text=\n\ gets\ things\ going\ by\ instantiating\ a\ new\ "Game",\ which\ is\ the\ main\ class\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\n\ A\ main()\ for\ the\ application\:\n\ from\ Eckel,\ "Thinking\ in\ Java,\ 3rd\ Ed."\n
+numComments=2

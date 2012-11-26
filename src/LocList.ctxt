@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=
+comment0.target=LocList()
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ LocList\n
+comment1.params=y
+comment1.target=java.lang.Integer\ get(int)
+comment1.text=\n\ get\ element\ 'y'\ of\ my\ list\ (0\ is\ the\ first\ one,\ just\ like\ arrays)\n
+comment2.params=
+comment2.target=boolean\ isEmpty()
+comment2.text=\n\ tells\ us\ if\ myList\ is\ empty,\ duh\n
+comment3.params=
+comment3.target=int\ size()
+comment3.text=\n\ how\ many\ elements\ in\ the\ list\ \n
+comment4.params=
+comment4.target=java.lang.String\ toString()
+numComments=5

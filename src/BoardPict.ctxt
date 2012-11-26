@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.params=
+comment0.target=BoardPict()
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ BoardPict.\n\ Hmmm,\ could\ use\ static\ initializers\ like\ barRect\ above.\ \n\ If\ board\ gets\ resizeable\ many\ of\ the\ things\ above\ would\ need\ to\ merely\ lose\ the\ "final".\n\ Beware\ of\ changing\ board\ size\ while\ a\ move\ or\ click\ is\ going\ on?\ \n
+numComments=1

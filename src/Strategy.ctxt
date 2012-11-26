@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=currentBoard\ theColor
+comment0.target=Move\ pickBestMove(Board,\ Player)
+comment0.text=\n\ Given\ a\ board,\ will\ tell\ us\ the\ "best"\ move.\n\ Note\:\ if\ we're\ on\ the\ bar,\ our\ only\ possible\ first\ partialmove\ is\ to\ get\ in\ \n\ from\ bar,\ so\ pickBestMove\ had\ better\ do\ that\ first\!\n
+comment1.params=aBoard\ playerColor
+comment1.target=Move\ pickBarMove(Board,\ Player)
+comment1.text=\n\ First\ get\ in\ from\ the\ bar,\ then\ fill\ the\ rest\ of\ the\ move\ with\ first\n\ of\ the\ available\ moves.\n\ This\ can\ be\ used\ by\ any\ of\ the\ Strategies.\n\ Not\ very\ strategic\ since\ it\ just\ uses\ first\ available\ moves\n\ for\ in-from-bar\ and\ then\ while\ canMove\ \!\!??\n
+numComments=2

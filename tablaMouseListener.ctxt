@@ -1,6 +1,0 @@
-#BlueJ class context
-comment0.params=p
-comment0.target=tablaMouseListener(JBackgammon)
-comment1.params=e
-comment1.target=void\ mouseReleased(java.awt.event.MouseEvent)
-numComments=2

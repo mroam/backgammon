@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.params=aContentPane\ newMyGame
+comment0.target=FixedButton(java.awt.Container,\ Game)
+comment1.params=point
+comment1.target=void\ drawOnPoint(int)
+comment1.text=\n\ Is\ used\ to\ display\ the\ "move-here"\ buttons\ on\ the\ GUI,\ at\ the\ bottom\ of\n\ the\ points\ that\ are\ legal\ move\ destinations\ for\ the\ selectedPoint.\n\ Uses\ Game.findX(pointNum)\ and\ Game.findY(pointNum)\ which\ report\ the\n\ coords\ of\ the\ specified\ point.\n
+numComments=2

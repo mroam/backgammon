@@ -1,0 +1,30 @@
+#BlueJ class context
+comment0.params=newStart\ newRollValue\ newEnd\ newBoard\ newColor
+comment0.target=PartialMove(int,\ int,\ int,\ Board,\ Player)
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ MoveOne\n\ Note\:\ start\ +\ rollValue\ might\ not\ equal\ end\ when\ bearing\ off\n\ but\ creator\ of\ PartialMove\ should\ use\ \n\ int\ Board.endPointMovingFrom(int\ start,\ int\ steps,\ int\ color)\n\ to\ calculate\ end.\n\ and\ no\ higher\ blots\ can\ use\ a\ too-high\ rollValue.\n\ ??\ might\ want\ to\ know\ what\ game\ you\ belong\ to??\ or\ can\ ask\ the\ board??\n
+comment1.params=otherPartial\ otherBoard
+comment1.target=PartialMove(PartialMove,\ Board)
+comment1.text=\n\ Copy\ constructor\ for\ deep\ copy\!\n\ Usage\ \ PartialMove\ p\ \=\ new\ PartialMove(\ existingPartial\ );\n\ ??\ Should\ I\ also\ implement\ clone(\ )\ ???\ Nah,\ online\ says\ bad\ implementation,\ subtle\ bugs.\n\ "Game"\ is(\ could\ be)\ here\ so\ other\ Games\ can\ copy\ boards\ from\ this\ board's\ game\n
+comment10.params=other
+comment10.target=int\ compareTo(PartialMove)
+comment10.text=\n\ required\ function\ for\ implementing\ "Comparable"\n\ returns\ negative\ integer,\ 0,\ or\ a\ positive\ integer\ depending\ on\ whether\ the\ \n\ "this"\ is\ less\ than,\ equal\ to,\ or\ greater\ than\ the\ other\ object.\n\ \n\ ??\ Does\ it\ matter\ if\ these\ are\ using\ the\ same\ dice\ "whichDie"????\n
+comment2.params=
+comment2.target=boolean\ isPossible()
+comment2.text=\n\ This\ could\ be\ done\ with\ the\ click\ (??\ "handlePoint"\ ??\ )\ maybe?\ but\ then\ have\ to\ unclick?\n\ \n\ This\ does\ NOT\ verify\ that\ any\ of\ the\ dice\ match\ the\ "rollValue"\ (distance\ moved),\ because\ we\n\ might\ be\ constructing\ all\ kinds\ of\ hypothetical\ moves\ (if\ they\ do\ that,\ then\ we\ could\ do\n\ this)\ without\ changing\ the\ dice\ for\ each\ move\ we\ consider.\n
+comment3.params=
+comment3.target=int\ getStart()
+comment4.params=
+comment4.target=int\ getEnd()
+comment5.params=
+comment5.target=Player\ getPlayerColor()
+comment6.params=
+comment6.target=int\ getRollValue()
+comment7.params=
+comment7.target=java.lang.String\ toString()
+comment7.text=\n\ was\ precise\ and\ verbose\ "[start\:3,\ end\:6,\ rollValue\:3,\ color\:[player\ black]]"\n\ but\ now\ more\ concise\ "[[player\ black]\ 3\=>6\ (rollVal\:3)]"\n
+comment8.params=other
+comment8.target=boolean\ equals(java.lang.Object)
+comment8.text=\n\ has\ to\ check\ values\ inside\ PartialMoves\n
+comment9.params=
+comment9.target=int\ hashCode()
+numComments=11
