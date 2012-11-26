@@ -320,7 +320,9 @@ Notes:
 as of Feb2012: AI calls thinkAndPlay which asks board for allLegalPartialMoves and does the "best."
 
 JavaDoc Notes:
-2012 nov 26: hmmm, oops using old bluej 2.5 and using menu "tools:project documentation" is getting error "package org.junit does not exist"...
-java 1.5 (aka java 5) api is at: http://docs.oracle.com/javase/1.5.0/docs/api/
-java 6 api is at:  http://docs.oracle.com/javase/6/docs/api/
-our local server api for java 6 is at: http://192.168.0.4/demos_and_samples/programming_references/java/docs/api6/docs/api/index.html
+2012 nov 26: hmmm, with old bluej 2.5 the menu "tools:project documentation" got error "package org.junit does not exist"... fixed by getting bluej 3.0.8
+Java 1.5 (aka java 5) api is at: http://docs.oracle.com/javase/1.5.0/docs/api/
+Java 6 api is at:  http://docs.oracle.com/javase/6/docs/api/
+Our local server api for java 6 is at: http://192.168.0.4/demos_and_samples/programming_references/java/docs/api6/docs/api/index.html
+GitHub serves static HTML files that are in the gh-pages folder of your repo as http://your_username.github.com/your_repo/.
+So after running "Tools:Project Documentation" in blueJ, I'm copying the automatically generated javadocs from doc folder to gh-pages folder. Then our uri should be "http://mroam.github.com/backgammon/"
