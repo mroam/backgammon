@@ -28,7 +28,8 @@ by George Vulov <georgevulov@hotmail.com> & Cody Planteen <frostgiant@msn.com>.
 [The TerraIM (instant messaging) project (http://terraim.sourceforge.net/index.php)
 has updates in 2008 from georgevulov@hotmail.com]
 [A search online in fall 2012 finds a Cody Planteen involved with a
-"Quiklst" project that is part of a Georgia Tech embedded controller.]
+"Quiklst" project that is part of a Georgia Tech embedded controller.
+"frostgiant@msn.com" is a dead address, bounced 2012 Nov.]
 
 Revised by Josh G. & Julien S. & Mike Roam starting Sep 2011.
 
