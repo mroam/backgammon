@@ -101,10 +101,11 @@ So maybe score = (s * d)?   or s + d?
 
 
 ...Future Plans:
+[ ]Animate the moves on the board.
 [ ]Command objects should have toString and fromString for unambiguous text representations that can 
 be used in those String packets for network play.
-[ ]PointNum class should exist, basically wrap an int, and sometimes also wrap a PlayerColor–perhaps 
-have a SpecialPointNum class that also requires PlayerColor for bar and bear–, and have constructors 
+[ ]PointNum class should exist, basically wrap an int, and sometimes also wrap a PlayerColor√êperhaps 
+have a SpecialPointNum class that also requires PlayerColor for bar and bear√ê, and have constructors 
 and distance calculators that return NO_SUCH_MOVE or ILLEGAL_MOVE for special places unless you also 
 specify a PlayerColor
 [ ]"Tournament" has "Games" that have "Boards" and "Players" (that might be AI or human (network?))
@@ -112,7 +113,7 @@ specify a PlayerColor
 from bar is constrained in the moves that can hit you since the enemy has to get onto the board with 
 exact roll before being able to do anything else.
 [ ]Attribute backgammon. At method granularity anything we keep--the legit? & test & exception methods 
-are all mine. as is AI, Move, PartialMove, howMany...(), 
+are all mine. as is AI, Move, PartialMove, howMany...(),√ä
 [ ]Ted's suggestion: sometimes let a blot be hit so it can go back and mess around in
 the opponent's final quadrants.
 [ ]Alter gameStartStrategy to work for white as well as black so we can press AI move!
