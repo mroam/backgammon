@@ -322,9 +322,25 @@ Notes:
 as of Feb2012: AI calls thinkAndPlay which asks board for allLegalPartialMoves and does the "best."
 
 JavaDoc Notes:
-2012 nov 26: hmmm, with old bluej 2.5 the menu "tools:project documentation" got error "package org.junit does not exist"... fixed by getting bluej 3.0.8
+2012 nov 26: hmmm, with old bluej 2.5 the menu "tools:project documentation" 
+   got error "package org.junit does not exist"... fixed by getting bluej 3.0.8
 Java 1.5 (aka java 5) api is at: http://docs.oracle.com/javase/1.5.0/docs/api/
 Java 6 api is at:  http://docs.oracle.com/javase/6/docs/api/
-Our local server api for java 6 is at: http://192.168.0.4/demos_and_samples/programming_references/java/docs/api6/docs/api/index.html
+Our local server api for java 6 is at: 
+    http://192.168.0.4/demos_and_samples/programming_references/java/docs/api6/docs/api/index.html
 GitHub serves static HTML files that are in the gh-pages folder of your repo as http://your_username.github.com/your_repo/.
-So after running "Tools:Project Documentation" in blueJ, I'm copying the automatically generated javadocs from doc folder to gh-pages folder. Then our uri should be "http://mroam.github.com/backgammon/"
+So after running "Tools:Project Documentation" in blueJ, I'm copying the automatically generated javadocs 
+from doc folder to gh-pages folder. Then our uri should be "http://mikeroam.github.com/backgammon/"
+
+PS: Team member L told me in 2013:
+“I was screwing around in aptitude on Ubuntu and I found this backgammon program.
+The AI is crazy good and it is opensource.
+Here is a link http://www.gnubg.org/ “
+
+to which I replied,
+“thanks , L: I see that it was world champion in 2006 (against its only competitor that was accidentally using an older engine)
+and "from around 1900 to 2000 on FIBS,the First Internet Backgammon Server -- at its strongest, it ranks in the top 5 of over 6000 rated players there) and is gradually improving"
+
+I see it has CVS repo, and is in c ...
+I've got to study how they compete
+--Mike”
