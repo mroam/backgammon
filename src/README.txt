@@ -328,9 +328,10 @@ Java 1.5 (aka java 5) api is at: http://docs.oracle.com/javase/1.5.0/docs/api/
 Java 6 api is at:  http://docs.oracle.com/javase/6/docs/api/
 Our local server api for java 6 is at: 
     http://192.168.0.4/demos_and_samples/programming_references/java/docs/api6/docs/api/index.html
-GitHub serves static HTML files that are in the gh-pages folder of your repo as http://your_username.github.com/your_repo/.
+GitHub serves static HTML files that are in the gh-pages folder of your repo as http://your_username.github.io/your_repo/.
 So after running "Tools:Project Documentation" in blueJ, I'm copying the automatically generated javadocs 
-from doc folder to gh-pages folder. Then our uri should be "http://mikeroam.github.com/backgammon/"
+from doc folder to gh-pages folder. Then our uri should be "http://mikeroam.github.io/backgammon/"
+(Note: used to be ".com" but as of 2021 is using ".io")
 
 PS: Team member L told me in 2013:
 “I was screwing around in aptitude on Ubuntu and I found this backgammon program.
