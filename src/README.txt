@@ -339,9 +339,10 @@ The AI is crazy good and it is opensource.
 Here is a link http://www.gnubg.org/ “
 
 to which I replied,
-“thanks , L: I see that it was world champion in 2006 (against its only competitor that was accidentally using an older engine)
-and "from around 1900 to 2000 on FIBS,the First Internet Backgammon Server -- at its strongest, it ranks in the top 5 of over 6000 rated players there) and is gradually improving"
+“thanks , L: I see that it was world champion in 2006 (against its only competitor that was accidentally 
+using an older engine) and "from around 1900 to 2000 on FIBS,the First Internet Backgammon Server -- 
+at its strongest, it ranks in the top 5 of over 6000 rated players there -- and is gradually improving"
 
-I see it has CVS repo, and is in c ...
+I see it has CVS repo, and is written in C ...
 I've got to study how they compete
---Mike”
+--M”
