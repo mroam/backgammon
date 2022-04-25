@@ -330,7 +330,7 @@ Our local server api for java 6 is at:
     http://192.168.0.4/demos_and_samples/programming_references/java/docs/api6/docs/api/index.html
 GitHub serves static HTML files that are in the gh-pages folder of your repo as http://your_username.github.io/your_repo/.
 So after running "Tools:Project Documentation" in blueJ, I'm copying the automatically generated javadocs 
-from doc folder to gh-pages folder. Then our uri should be "http://mikeroam.github.io/backgammon/"
+from doc folder to gh-pages folder. Then our uri should be "http://mroam.github.io/backgammon/"
 (Note: used to be ".com" but as of 2021 is using ".io")
 
 PS: Team member L told me in 2013:
